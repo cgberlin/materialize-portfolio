@@ -1,0 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+#phaser {
+  width:100vw;
+  height:30vh;
+}
