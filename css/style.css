@@ -29,3 +29,12 @@
 #contact-form {
 	width:50vw;
 }
+
+@media only screen and (max-device-width : 768px) {
+	#card-container {
+		flex-flow: column;
+	}
+	#contact-form {
+		width:70vw;
+	}
+}
