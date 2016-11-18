@@ -71,6 +71,3 @@ function update() {
 function disable() {
   game.physics.p2.gravity.y = 0;
 }
-$('#projects-button').on('click', function() {
-   disable();
-});
