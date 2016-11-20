@@ -1,0 +1,25 @@
+{
+  "name": "materialize-portfolio",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgberlin/materialize-portfolio.git"
+  },
+  "author": "cody berlin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cgberlin/materialize-portfolio/issues"
+  },
+  "homepage": "https://github.com/cgberlin/materialize-portfolio#readme",
+  "devDependencies": {
+    "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

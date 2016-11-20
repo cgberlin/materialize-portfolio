@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+#phaser {
+  width:100vw;
+  height:30vh;
+}
+
+.card {
+	height:25rem;
+	width:25rem;
+}
+
+#project-container {
+	margin-top:34rem;
+	text-align: center;
+}
+#card-container {
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	margin:5rem;
+}
+
+#contact-container {
+	text-align: center;
+	margin-top:19rem;
+}
+#contact-form {
+	width:50vw;
+}
+
+@media only screen and (max-device-width : 768px) {
+	#card-container {
+		flex-flow: column;
+	}
+	#contact-form {
+		width:70vw;
+	}
+}
