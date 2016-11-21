@@ -75,30 +75,30 @@
           <h2>Contact Me</h2>
           <hr>
             <div class="row" id = "contact-form">
-              <form class="col s12">
+              <form class="col s12" method="POST" action="//formspree.io/codyberlin@gmail.com" id = "contact-form">
                 <div class="row">
                   <div class="input-field col s6">
-                    <input id="first_name" type="text" class="validate">
+                    <input id="first_name" type="text" class="validate" name = "first name">
                     <label for="first_name">First Name</label>
                   </div>
                   <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate">
+                    <input id="last_name" type="text" class="validate" name = "last name">
                     <label for="last_name">Last Name</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
+                    <input id="email" type="email" class="validate" name = "_replyto">
                     <label for="email">Email</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <textarea id="textarea1" class="materialize-textarea" name = "message"></textarea>
                     <label for="textarea1">Message</label>
                   </div>
                 </div>
-                <a class="waves-effect waves-light btn">Send</a>
+                <button class="waves-effect waves-light btn" id = "submit-button" type="submit">Send</button>
               </form>
             </div>
 
@@ -117,3 +117,4 @@
       <script type='text/javascript' src='js/control.js'></script>
 
     </body>
+
