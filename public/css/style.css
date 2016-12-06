@@ -4,6 +4,8 @@
 #phaser {
   width:100vw;
   height:30vh;
+  background: linear-gradient(rgba(0,184,212,1) 0%, rgba(255,255,255,1) 100%); /* w3c */ 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00b8d4',GradientType=1 ); /* ie6-9 */ }
 }
 
 .card {
