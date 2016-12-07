@@ -13,6 +13,13 @@
 .card:hover {
 	box-shadow: 3px 3px 1.5px 1.5px #26a69a;
 }
+#destroy-game-button {
+	width:10%;
+	position:absolute;
+	bottom:5%;
+	left:45%;
+	right:45%;
+}
 
 #project-container {
 	margin-top:34rem;
@@ -40,5 +47,8 @@
 	}
 	#contact-form {
 		width:70vw;
+	}
+	.card {
+		margin-top:5rem;
 	}
 }

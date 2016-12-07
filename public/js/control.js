@@ -18,12 +18,18 @@ scene.addIndicators();
 
 
 
-
+$('#destroy-game-button').on('click', function(){
+  moveDownToProjects();
+});
 
 $('#projects-button').on('click', function() {
+  moveDownToProjects();
+});
+
+function moveDownToProjects(){
   $('main').velocity('scroll', {duration:1500}).velocity({opacity:1}).delay(1500);
   destroyGame();
-});
+}
 
 $('#contact-me-button').on('click', function() {
   $('footer').velocity('scroll', {duration:1500}).velocity({opacity:1});
