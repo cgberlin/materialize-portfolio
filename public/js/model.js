@@ -13,10 +13,8 @@ function preload() {
 
 var sprite;
 var text;
-var game = new Phaser.Game(winW, winH, Phaser.CANVAS, 'phaser', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(winW, winH, Phaser.CANVAS, 'phaser', { preload: preload, create: create, update: update }, true);
 function create() {
-
-    game.stage.backgroundColor = 0xffffff;
 
     game.physics.startSystem(Phaser.Physics.P2JS);
 
