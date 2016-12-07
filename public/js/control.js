@@ -1,3 +1,5 @@
+var isGameDestroyed = false;
+
 var controller = new ScrollMagic.Controller();
 
 var tween = TweenMax.staggerFromTo(".card", 5,
@@ -7,12 +9,12 @@ var tween = TweenMax.staggerFromTo(".card", 5,
 
 var scene = new ScrollMagic.Scene({
     triggerElement: '#card-container',
-    duration: 400 /* How many pixels to scroll / animate */
+    duration: 400 
   })
   .setTween(tween)
   .addTo(controller);
   
-  // Add debug indicators fixed on right side
+
 scene.addIndicators();
 
 var showAboutMe = TweenMax.staggerFromTo("#about-me-card", 5,
@@ -22,40 +24,54 @@ var showAboutMe = TweenMax.staggerFromTo("#about-me-card", 5,
 
 var scene = new ScrollMagic.Scene({
     triggerElement: '#about-me-container',
-    duration: 200 /* How many pixels to scroll / animate */
+    duration: 200 
   })
   .setTween(showAboutMe)
   .addTo(controller);
   
-  // Add debug indicators fixed on right side
+ 
+scene.addIndicators();
+
+var showContactMe = TweenMax.staggerFromTo(".row", 5,
+    {autoAlpha:0,ease:Power4.easeInOut}, 
+    {autoAlpha:1,ease:Power4.easeInOut}
+ , 1.5);
+
+var scene = new ScrollMagic.Scene({
+    triggerElement: '#contact-container',
+    duration: 200 
+  })
+  .setTween(showContactMe)
+  .addTo(controller);
+  
+ 
 scene.addIndicators();
   
 
 
 
-$('#destroy-game-button').on('click', function(){
-  moveDownToProjects();
-});
 
-$('#projects-button').on('click', function() {
-  moveDownToProjects();
-});
+function scroller(event){
+  var scrollYPos = $(event.data.id).offset().top;
+  event.preventDefault();
+  TweenMax.to(window, 2, {scrollTo:{y:scrollYPos, x:0}, ease:Power4.easeOut})
+  }
 
-function moveDownToProjects(){
-  $('main').velocity('scroll', {duration:1500}).velocity({opacity:1}).delay(1500);
-  destroyGame();
-}
 
-$('#contact-me-button').on('click', function() {
-  $('footer').velocity('scroll', {duration:1500}).velocity({opacity:1});
+$('#destroy-game-button, #projects-button, #contact-me-button').on('click', function(){
   destroyGame();
 });
 
-$('#home-star').on('click', function() {
-  $('body').velocity('scroll', {duration:1500}).velocity({opacity:1});
-});
+$("#destroy-game-button").bind('click', { id: '#about-me-container' }, scroller);
+$("#projects-button").bind('click', { id: '#project-container' }, scroller);
+$("#contact-me-button").bind('click', { id: 'footer' }, scroller);
+
 
 function destroyGame() {
-	game.destroy();
-	$('#phaser').html('<h1 style="text-align:center; margin-top:15rem">Cody Berlin</h1>');
+	if (isGameDestroyed == false){
+		game.destroy();
+		$('#phaser').html('<h1 style="text-align:center; margin-top:15rem">Cody Berlin</h1>');
+		isGameDestroyed = true;
+	}
+	
 }
