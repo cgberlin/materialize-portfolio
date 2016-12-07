@@ -21,9 +21,18 @@
 	right:45%;
 }
 
-#project-container {
+#project-container, #about-me-container {
 	margin-top:34rem;
 	text-align: center;
+}
+#about-me-container {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+}
+#about-me-card {
+	
 }
 #card-container {
 	display:flex;
@@ -51,4 +60,5 @@
 	.card {
 		margin-top:5rem;
 	}
+
 }

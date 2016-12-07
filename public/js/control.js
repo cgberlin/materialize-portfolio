@@ -14,6 +14,21 @@ var scene = new ScrollMagic.Scene({
   
   // Add debug indicators fixed on right side
 scene.addIndicators();
+
+var showAboutMe = TweenMax.staggerFromTo("#about-me-card", 5,
+    {autoAlpha:0,ease:Power4.easeInOut}, 
+    {autoAlpha:1,ease:Power4.easeInOut}
+ , 1.5);
+
+var scene = new ScrollMagic.Scene({
+    triggerElement: '#about-me-container',
+    duration: 200 /* How many pixels to scroll / animate */
+  })
+  .setTween(showAboutMe)
+  .addTo(controller);
+  
+  // Add debug indicators fixed on right side
+scene.addIndicators();
   
 
 
