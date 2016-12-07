@@ -1,5 +1,27 @@
+var controller = new ScrollMagic.Controller();
+
+var tween = TweenMax.staggerFromTo(".card", 5,
+    {autoAlpha:0,ease:Power4.easeInOut}, 
+    {autoAlpha:1,ease:Power4.easeInOut}
+ , 1.5);
+
+var scene = new ScrollMagic.Scene({
+    triggerElement: '#card-container',
+    duration: 400 /* How many pixels to scroll / animate */
+  })
+  .setTween(tween)
+  .addTo(controller);
+  
+  // Add debug indicators fixed on right side
+scene.addIndicators();
+  
+
+
+
+
+
 $('#projects-button').on('click', function() {
-  $('main').velocity('scroll', {duration:1500}).velocity({opacity:1});
+  $('main').velocity('scroll', {duration:1500}).velocity({opacity:1}).delay(1500);
   destroyGame();
 });
 
