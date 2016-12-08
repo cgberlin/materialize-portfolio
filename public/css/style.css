@@ -11,7 +11,7 @@
 	width:25rem;
 }
 .card:hover {
-	box-shadow: 3px 3px 1.5px 1.5px #26a69a;
+	box-shadow: 1.5px 1.5px #26a69a;
 }
 #destroy-game-button {
 	width:10%;

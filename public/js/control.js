@@ -1,26 +1,37 @@
-var isGameDestroyed = false;
+var isGameDestroyed = false,
+	width = $(window).width();
+console.log(width);
 
 var controller = new ScrollMagic.Controller();
 
-var tween = TweenMax.staggerFromTo(".card", 5,
-    {autoAlpha:0,ease:Power4.easeInOut}, 
-    {autoAlpha:1,ease:Power4.easeInOut}
- , 1.5);
+var tween = TweenMax.staggerFromTo(['#text-bug', '#recipe-calc', '#asteroids', '#news-ping'], 5,
+    {autoAlpha:0,ease:Power4.easeInOut,x:-100}, 
+    {autoAlpha:1,ease:Power4.easeInOut, x:0}
+ , 1);
 
-var scene = new ScrollMagic.Scene({
+if (width < 768) {
+	var scene = new ScrollMagic.Scene({
     triggerElement: '#card-container',
-    duration: 400 
+    duration: 1000 
   })
   .setTween(tween)
   .addTo(controller);
+}
+else {
+	var scene = new ScrollMagic.Scene({
+	    triggerElement: '#card-container',
+	    duration: 400 
+	  })
+	  .setTween(tween)
+	  .addTo(controller);
+	}
   
 
 scene.addIndicators();
 
-var showAboutMe = TweenMax.staggerFromTo("#about-me-card", 5,
-    {autoAlpha:0,ease:Power4.easeInOut}, 
-    {autoAlpha:1,ease:Power4.easeInOut}
- , 1.5);
+var showAboutMe = TweenMax.fromTo("#about-me-card", 5,
+	{autoAlpha:0,ease:Power4.easeInOut,x:-100}, 
+    {autoAlpha:1,ease:Power4.easeInOut, x:0});
 
 var scene = new ScrollMagic.Scene({
     triggerElement: '#about-me-container',
@@ -33,8 +44,8 @@ var scene = new ScrollMagic.Scene({
 scene.addIndicators();
 
 var showContactMe = TweenMax.staggerFromTo(".row", 5,
-    {autoAlpha:0,ease:Power4.easeInOut}, 
-    {autoAlpha:1,ease:Power4.easeInOut}
+    {autoAlpha:0,ease:Power4.easeInOut, y:-100}, 
+    {autoAlpha:1,ease:Power4.easeInOut, y:0}
  , 1.5);
 
 var scene = new ScrollMagic.Scene({
