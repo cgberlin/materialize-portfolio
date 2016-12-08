@@ -4,14 +4,14 @@ console.log(width);
 
 var controller = new ScrollMagic.Controller();
 
-var tween = TweenMax.staggerFromTo(['#text-bug', '#recipe-calc', '#asteroids', '#news-ping'], 5,
-    {autoAlpha:0,ease:Power4.easeInOut,x:-100}, 
-    {autoAlpha:1,ease:Power4.easeInOut, x:0}
+var tween = TweenMax.staggerFromTo(['#project-head', '#text-bug', '#recipe-calc', '#asteroids', '#news-ping'], 5,
+    {autoAlpha:0,ease:Power4.easeInOut,y:+100}, 
+    {autoAlpha:1,ease:Power4.easeInOut, y:0}
  , 1);
 
 if (width < 768) {
 	var scene = new ScrollMagic.Scene({
-    triggerElement: '#card-container',
+    triggerElement: '#project-container',
     duration: 1000 
   })
   .setTween(tween)
@@ -19,7 +19,7 @@ if (width < 768) {
 }
 else {
 	var scene = new ScrollMagic.Scene({
-	    triggerElement: '#card-container',
+	    triggerElement: '#project-container',
 	    duration: 400 
 	  })
 	  .setTween(tween)
@@ -29,9 +29,10 @@ else {
 
 scene.addIndicators();
 
-var showAboutMe = TweenMax.fromTo("#about-me-card", 5,
+var showAboutMe = TweenMax.staggerFromTo(["#about-me-header", "#about-me-card"], 5,
 	{autoAlpha:0,ease:Power4.easeInOut,x:-100}, 
-    {autoAlpha:1,ease:Power4.easeInOut, x:0});
+    {autoAlpha:1,ease:Power4.easeInOut, x:0}, 
+    4);
 
 var scene = new ScrollMagic.Scene({
     triggerElement: '#about-me-container',
@@ -43,8 +44,11 @@ var scene = new ScrollMagic.Scene({
  
 scene.addIndicators();
 
-var showContactMe = TweenMax.staggerFromTo(".row", 5,
-    {autoAlpha:0,ease:Power4.easeInOut, y:-100}, 
+
+
+
+var showContactMe = TweenMax.staggerFromTo(["#contact-header", ".row"], 5,
+    {autoAlpha:0,ease:Power4.easeInOut, y:+100}, 
     {autoAlpha:1,ease:Power4.easeInOut, y:0}
  , 1.5);
 
