@@ -4,39 +4,74 @@
 #phaser {
   width:100vw;
   height:30vh;
+  font-family: 'Lobster', cursive;
+}
+#my-name {
+	font-size:7rem;
+	position:relative;
+	top:15%;
+	text-shadow: 2px 2px 5px #00b8d4;
+	text-align:center;
+	z-index: 100;
 }
 
 .card {
 	height:25rem;
 	width:25rem;
 }
-.card:hover {
-	box-shadow: 1.5px 1.5px #26a69a;
+
+#node {
+	left:19%;
 }
-#destroy-game-button {
-	width:10%;
-	position:absolute;
-	bottom:5%;
-	left:45%;
-	right:45%;
+#html {
+	left:80%;
 }
+#css3 {
+	left:9%;
+}
+#react {
+	left:76%;
+}
+#git {
+	left: 29%;
+}
+#mongodb {
+	left:87%;
+}
+#express {
+	left: 58%;
+}
+#redux {
+	left:22%;
+}
+
 #text-bug, #recipe-calc, #news-ping, #asteroids {
 	height:45%;
 	width:45%;
 }
+#text-bug:hover, #recipe-calc:hover, #news-ping:hover, #asteroids:hover {
+	box-shadow: 1.5px 1.5px #26a69a;
+}
 #project-container, #about-me-container {
 	margin-top:34rem;
 	text-align: center;
+}
+.main-words {
+	position:relative;
+	font-size:2.2rem;
 }
 #about-me-container {
 	display:flex;
 	align-items: center;
 	justify-content: center;
 	flex-flow: column;
+	margin-top:57rem;
 	z-index:20;
 }
-#about-me-card {
-	
+#about-me-header, #project-head, #contact-header{
+	font-size: 5rem;
+	text-shadow: 2px 2px 5px #00b8d4;
+	font-family: 'Lobster', cursive;
 }
 #card-container {
 	display:flex;
