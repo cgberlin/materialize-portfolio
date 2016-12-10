@@ -1,11 +1,10 @@
 var isGameDestroyed = false,
 	width = $(window).width();
-console.log(width);
 
 var controller = new ScrollMagic.Controller();
 
 var tween = TweenMax.staggerFromTo(['#project-head', '#text-bug', '#recipe-calc', '#asteroids', '#news-ping'], 150,
-    {autoAlpha:0,ease:Power4.easeInOut,x:+100}, 
+    {autoAlpha:0,ease:Power4.easeInOut,x:-100}, 
     {autoAlpha:1,ease:Power4.easeInOut,x:0}
  , 70);
 
@@ -65,7 +64,7 @@ var scene = new ScrollMagic.Scene({
 
 
 var moveWords = TweenMax.staggerFromTo(["#node", "#html", "#css3", "#redux", "#react", "#git", "#mongodb", "#express"], 500,
-    {autoAlpha:0,ease:Power4.easeInOut, x:+500}, 
+    {autoAlpha:0,ease:Power4.easeInOut, x:-500}, 
     {autoAlpha:1,ease:Power4.easeInOut, x:0}
  ,30);
 
