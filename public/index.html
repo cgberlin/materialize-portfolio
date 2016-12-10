@@ -17,22 +17,25 @@
     <body>
       <header>
         <div class="navbar-fixed">
-          <nav>
-            <div class="nav-wrapper cyan accent-4">
-              <ul class = "brand-logo center">
-                <li id = "about-me-button"><a class="waves-effect waves-light btn" href="#">About Me</a></li>
-              </ul>
-              <ul class="left">
-                <li id = "projects-button"><a class="waves-effect waves-light btn" href="#">Projects</a></li>
-              </ul>
-              <ul class="right">
-                <li id = "contact-me-button"><a class="waves-effect waves-light btn" href="#">Contact</a></li>
-              </ul>
-            </div>
-          </nav>
+            <nav>
+              <div class="nav-wrapper cyan accent-4">            
+                <a href="#" data-activates="dropdown1" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                  <li class = "about-me-button"><a class="waves-effect waves-light btn" href="#">About Me</a></li>
+                  <li class = "projects-button"><a class="waves-effect waves-light btn" href="#">Projects</a></li>
+                  <li class = "contact-me-button"><a class="waves-effect waves-light btn" href="#">Contact</a></li>
+                </ul>
+                <ul class="dropdown-content" id="dropdown1">
+                  <li class = "about-me-button"><a class="waves-effect waves-light btn" href="#">About Me</a></li>
+                  <li class = "projects-button"><a class="waves-effect waves-light btn" href="#">Projects</a></li>
+                  <li class = "contact-me-button"><a class="waves-effect waves-light btn" href="#">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
         </div>
         <div id = "phaser">
           <h1 id = "my-name">Cody Berlin</h1>
+          <div id = "play-stagger-words" />
           <div id = "node" class = "main-words">
             <p>NodeJS</p>
           </div>

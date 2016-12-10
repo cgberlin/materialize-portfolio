@@ -27,16 +27,16 @@
 	left:80%;
 }
 #css3 {
-	left:9%;
+	left:55%;
 }
 #react {
 	left:76%;
 }
 #git {
-	left: 29%;
+	left: 60%;
 }
 #mongodb {
-	left:87%;
+	left:18%;
 }
 #express {
 	left: 58%;
@@ -59,6 +59,7 @@
 .main-words {
 	position:relative;
 	font-size:2.2rem;
+	color:#00b8d4;
 }
 #about-me-container {
 	display:flex;
@@ -102,6 +103,15 @@
 	#text-bug, #recipe-calc, #news-ping, #asteroids {
 	height:auto;
 	width:auto;
+	}
+	#html {
+		left:60%;
+	}
+	#node {
+		margin-top:9rem;
+	}
+	#react {
+		left:30%;
 	}
 
 }

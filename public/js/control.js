@@ -65,16 +65,16 @@ scene.addIndicators();
 
 
 
-var moveWords = TweenMax.fromTo(["#node", "#html", "#css3", "#redux", "#react", "#git", "#mongodb", "#express"], 5,
-    {autoAlpha:0,ease:Power4.easeInOut, y:+400}, 
-    {autoAlpha:1,ease:Power4.easeInOut, y:-300}
- );
+var moveWords = TweenMax.staggerFromTo(["#node", "#html", "#css3", "#redux", "#react", "#git", "#mongodb", "#express"], 5,
+    {autoAlpha:0,ease:Power4.easeInOut, y:+500}, 
+    {autoAlpha:1,ease:Power4.easeInOut, y:-100}
+ ,3);
 
 var scene = new ScrollMagic.Scene({
-    triggerElement: '#my-name',
+    triggerElement: '#play-stagger-words',
     duration: 400 
   })
-  .setPin('#my-name')
+  
   .setTween(moveWords)
   .addTo(controller);
   
@@ -93,7 +93,7 @@ function scroller(event){
 
 
 
-$("#about-me-button").bind('click', { id: '#about-me-container' }, scroller);
-$("#projects-button").bind('click', { id: '#project-container' }, scroller);
-$("#contact-me-button").bind('click', { id: 'footer' }, scroller);
-
+$(".about-me-button").bind('click', { id: '#about-me-container' }, scroller);
+$(".projects-button").bind('click', { id: '#project-container' }, scroller);
+$(".contact-me-button").bind('click', { id: 'footer' }, scroller);
+$(".button-collapse").sideNav();
