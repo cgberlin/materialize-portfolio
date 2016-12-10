@@ -60,6 +60,7 @@
 	position:relative;
 	font-size:2.2rem;
 	color:#00b8d4;
+	opacity: 0;
 }
 #about-me-container {
 	display:flex;
@@ -88,6 +89,9 @@
 }
 #contact-form {
 	width:50vw;
+}
+.dropdown-content {
+	color:#00b8d4;
 }
 
 @media only screen and (max-device-width : 768px) {
