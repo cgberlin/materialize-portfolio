@@ -38,12 +38,6 @@ var scene = new ScrollMagic.Scene({
   })
   .setTween(showAboutMe)
   .addTo(controller);
-  
- 
-
-
-
-
 
 var showContactMe = TweenMax.staggerFromTo(["#contact-header", ".row"], 50,
     {autoAlpha:0,ease:Power4.easeInOut, x:-100}, 
