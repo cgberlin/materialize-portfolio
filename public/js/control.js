@@ -8,7 +8,7 @@ var controller = new ScrollMagic.Controller();
 
 
 
-var myPlane = TweenMax.from('#paper-plane', 300,
+var myPlane = TweenMax.from('#paper-plane', 500,
     {x: -width -50, y: +300});
 
 var scene = new ScrollMagic.Scene({
@@ -16,7 +16,6 @@ var scene = new ScrollMagic.Scene({
     duration: 300
   })
   .setTween(myPlane)
-  .addIndicators()
   .addTo(controller);
   
 
@@ -31,7 +30,6 @@ var scene = new ScrollMagic.Scene({
     duration: 500
   })
   .setTween(myName)
-  .addIndicators()
   .addTo(controller);
   
 
