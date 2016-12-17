@@ -1,5 +1,9 @@
 width = $(window).width();
 
+if (width < 768) {
+  $('.card.horizontal').attr('class', 'card');
+}
+
 var controller = new ScrollMagic.Controller();
 
 
@@ -46,7 +50,6 @@ var scene = new ScrollMagic.Scene({
   })
   .setTween(moveWords)
   .addTo(controller);
-
 
 
 
