@@ -1,77 +1,51 @@
-var isGameDestroyed = false,
-	width = $(window).width();
+width = $(window).width();
 
 var controller = new ScrollMagic.Controller();
 
-var tween = TweenMax.staggerFromTo(['#project-head', '#text-bug', '#recipe-calc', '#asteroids', '#news-ping'], 150,
-    {autoAlpha:0,ease:Power4.easeInOut,x:-100}, 
-    {autoAlpha:1,ease:Power4.easeInOut,x:0}
- , 70);
-
-if (width < 768) {
-	var scene = new ScrollMagic.Scene({
-    triggerElement: '#project-container',
-    duration: 1300 
-  })
-  .setTween(tween)
-  .addTo(controller);
-}
-else {
-	var scene = new ScrollMagic.Scene({
-	    triggerElement: '#project-container',
-	    duration: 400 
-	  })
-	  .setTween(tween)
-	  .addTo(controller);
-	}
-  
 
 
-var showAboutMe = TweenMax.staggerFromTo(["#about-me-header", "#about-me-card"], 50,
-	{autoAlpha:0,ease:Power4.easeInOut,x:-100}, 
-    {autoAlpha:1,ease:Power4.easeInOut, x:0}, 
-    10);
-
-var scene = new ScrollMagic.Scene({
-    triggerElement: '#about-me-container',
-    duration: 300 
-  })
-  .setTween(showAboutMe)
-  .addTo(controller);
-
-var showContactMe = TweenMax.staggerFromTo(["#contact-header", ".row"], 50,
-    {autoAlpha:0,ease:Power4.easeInOut, x:-100}, 
-    {autoAlpha:1,ease:Power4.easeInOut, x:0}
- , 10);
+var myPlane = TweenMax.from('#paper-plane', 300,
+    {x: -width -50, y: +300});
 
 var scene = new ScrollMagic.Scene({
     triggerElement: '#show-contact',
-    duration: 200 
+    duration: 300
   })
-  .setTween(showContactMe)
+  .setTween(myPlane)
+  .addIndicators()
   .addTo(controller);
   
- 
+
+
+
+var myName = TweenMax.fromTo('#my-name', 50,
+    {css:{opacity:1}}, 
+    {css:{opacity:0}});
+
+var scene = new ScrollMagic.Scene({
+    triggerElement: '#play-stagger-words',
+    duration: 500
+  })
+  .setTween(myName)
+  .addIndicators()
+  .addTo(controller);
+  
 
 
 
 
 
 var moveWords = TweenMax.staggerFromTo(["#node", "#html", "#css3", "#redux", "#react", "#git", "#mongodb", "#express"], 500,
-    {autoAlpha:0,ease:Power4.easeInOut, x:-500}, 
-    {autoAlpha:1,ease:Power4.easeInOut, x:0}
+    {autoAlpha:0,ease:Power4.easeInOut, x:-500, y:-800}, 
+    {autoAlpha:1,ease:Power4.easeInOut, x:0, y:-200}
  ,30);
 
 var scene = new ScrollMagic.Scene({
-    triggerElement: '#play-stagger-words',
+    triggerElement: '#my-name',
     duration: 600 
   })
-  
   .setTween(moveWords)
   .addTo(controller);
-  
- 
-
 
 
 

@@ -36,7 +36,9 @@
             </ul>
         </div>
         <div id = "phaser">
-          <h1 id = "my-name">Cody Berlin</h1>
+          <div id = "pin-my-name">
+            <h1 id = "my-name">Cody Berlin</h1>
+          </div>
           <div id = "play-stagger-words">
             <div id = "node" class = "main-words">
               <p>NodeJS</p>
@@ -64,18 +66,19 @@
             </div>
           </div>
         </div>
+        <div id = "hide-words"></div>
       </header>
 
       <main>
         <div id = "about-me-container">
-            <h3 class="header" id = "about-me-header">About Me</h2>
-            <div id = "about-me-card" class="card vertical">
+            <div id = "about-me-card" class="card horizontal">
               <div class="card-image">
                 <img src="images/myhead.png">
               </div>
               <div class="card-stacked">
                 <div class="card-content">
-                  <p>Hi! My name is Cody Berlin. I am a full-stack developer who loves working on interesting projects using various technologies. You can contact me through either the Linkedin link below or the form at the bottom which goes direct to my email.</p>
+                  <h3 class="header" id = "about-me-header">About Me</h2>
+                  <h5>Hi! My name is Cody Berlin. I am a full-stack developer who loves working on interesting projects using various technologies. You can contact me through either the Linkedin link below or the form at the bottom which goes direct to my email.</h5>
                 </div>
                 <div class="card-action">
                   <a href="https://www.linkedin.com/in/cgberlin">LinkedIn</a>
@@ -84,84 +87,86 @@
               </div>
             </div>
         </div>
-
+        <div id = "trigger-projects"></div>
         <div id = "project-container">
             <h2 id = "project-head">Projects</h2>
-            <hr id = "project-trigger">
               <div id = "card-container">
-
-                <div class="card sticky-action" id = "text-bug">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/textbug.png">
+                <div class="card horizontal" id = "text-bug">
+                  <div class="card-image">
+                    <img src="images/textbug.png">
                   </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Text Bug<i class="material-icons right">more_vert</i></span>
-                    <p><a href="https://github.com/cgberlin/text-bug">Github</a></p>
-                    <p><a href="https://text-bug.herokuapp.com/">Demo</a></p>
-                  </div>
-                  <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Text Bug<i class="material-icons right">close</i></span>
-                    <p>A web app to help create auto-sending, scheduled text messages or reminders.</p>
-                    <p>Built using HTML5, CSS, MongoDB, Bootstrap, NodeJS, Express, Passport, Cronjob, and the Sinch API for sending the text messages.
-                  </div>
-                </div>
-
-                <div class="card sticky-action" id = "recipe-calc">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/recipe.png">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Recipe Calc<i class="material-icons right">more_vert</i></span>
-                    <p><a href="https://github.com/cgberlin/react-redux-recipe-calculator">Github</a></p>
-                    <p><a href="https://cgberlin-recipe.herokuapp.com/">Demo</a></p>
-                  </div>
-                  <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Recipe Calc<i class="material-icons right">close</i></span>
-                    <p>A web app to help find recipes either randomly or using ingredients supplied by the user.</p>
-                    <p>Built using React, Redux, HTML5, CSS, NodeJS, Express, and MaterialUI.
+                  <div class = "card-stacked">
+                    <div class="card-content">
+                      <h4>Text Bug</h4>
+                      <p>A web app to help create auto-sending, scheduled text messages or reminders.</p>
+                      <p>Built using HTML5, CSS, MongoDB, Bootstrap, NodeJS, Express, Passport, Cronjob, and the Sinch API for sending the text messages.</p>
+                    </div>
+                    <div class = "card-action">
+                      <a href="https://github.com/cgberlin/text-bug">Github</a>
+                      <a href="https://text-bug.herokuapp.com/">Demo</a>
+                    </div>
                   </div>
                 </div>
 
-                <div class="card sticky-action" id = "asteroids">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/asteroids.png">
+                <div class="card horizontal" id = "recipe-calc">
+                  <div class="card-image">
+                    <img src="images/recipe.png">
                   </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">2 Player Asteroids<i class="material-icons right">more_vert</i></span>
-                    <p><a href="https://github.com/cgberlin/phaser-socketio-ship-game">Github</a></p>
-                    <p><a href="http://shelbysedger.com">Demo</a></p>
-                  </div>
-                  <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">2 Player Asteroids<i class="material-icons right">close</i></span>
-                    <p>A two player game built entirely using phaserJS, socket.io, and express to expose the application.</p>
-                    <p>Built using PhaserJS, Socket.io, NodeJS, HTML5, MongoDB, and CSS.</p>
-                  </div>
-                </div>
-
-                <div class="card sticky-action" id = "news-ping">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/news-ping.png">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">News Ping<i class="material-icons right">more_vert</i></span>
-                    <p><a href="https://github.com/cgberlin/news-project">Github</a></p>
-                    <p><a href="https://github.com/cgberlin/news-project">Demo</a></p>
-                  </div>
-                  <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">News Ping<i class="material-icons right">close</i></span>
-                    <p>A small web app that uses an external API and the google maps API to log news stories based on a searched location.</p>
-                    <p>Built using HTML5, CSS, the google maps API, and a news API from mashape.</p>
+                  <div class = "card-stacked">
+                    <div class="card-content">
+                      <h4>Recipe Calc</h4>
+                      <p>A web app to help find recipes either randomly or using ingredients supplied by the user.</p>
+                      <p>Built using React, Redux, HTML5, CSS, NodeJS, Express, and MaterialUI.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/cgberlin/react-redux-recipe-calculator">Github</a>
+                        <a href="https://cgberlin-recipe.herokuapp.com/">Demo</a>
+                    </div>
                   </div>
                 </div>
 
+                <div class="card horizontal" id = "asteroids">
+                  <div class="card-image">
+                    <img src="images/asteroids.png">
+                  </div>
+                  <div class = "card-stacked">
+                    <div class="card-content">
+                      <h4>2 Player Asteroids</h4>
+                      <p>A two player game built entirely using phaserJS, socket.io, and express to expose the application.</p>
+                      <p>Built using PhaserJS, Socket.io, NodeJS, HTML5, MongoDB, and CSS.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="https://github.com/cgberlin/phaser-socketio-ship-game">Github</a>
+                      <a href="http://shelbysedger.com">Demo</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card horizontal" id = "news-ping">
+                  <div class="card-image">
+                    <img src="images/news-ping.png">
+                  </div>
+                  <div class = "card-stacked">
+                    <div class="card-content">
+                      <h4>News Ping</h4>
+                      <p>A small web app that uses an external API and the google maps API to log news stories based on a searched location.</p>
+                      <p>Built using HTML5, CSS, the google maps API, and a news API from mashape.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="https://github.com/cgberlin/news-project">Github</a>
+                      <a href="https://github.com/cgberlin/news-project">Demo</a>
+                    </div>
+                  </div>
+                </div>
               </div>
         </div>
         <div id = "show-contact" />
       </main>
       <footer>
+
         <div id = "contact-container">
+        <img src = "images/paper-plane.svg" id = "paper-plane">
           <h2 id = "contact-header">Contact Me</h2>
-          <hr id = "contact-trigger">
             <div class="row" id = "contact-form">
               <form class="col s12" method="POST" action="//formspree.io/codyberlin@gmail.com" id = "contact-form">
                 <div class="row">

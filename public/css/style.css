@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 #phaser {
   width:100vw;
   max-width:100%;
@@ -12,6 +13,9 @@
   flex-flow: column;
   margin-top:30rem;
   font-family: 'Lobster', cursive;
+}
+#text-bug, #recipe-calc, #news-ping, #asteroids {
+	margin:3rem;
 }
 #my-name {
 	font-size:7rem;
@@ -25,8 +29,8 @@
 	max-width:100%;
 }
 .card {
-	height:25rem;
-	width:25rem;
+	height:auto;
+	width:80vw;
 }
 #play-stagger-words {
 	margin-top:3rem;
@@ -57,15 +61,7 @@
 	left:-27rem;
 }
 
-#text-bug, #recipe-calc, #news-ping, #asteroids {
-	height:45%;
-	width:45%;
-}
-#text-bug:hover, #recipe-calc:hover, #news-ping:hover, #asteroids:hover {
-	box-shadow: 1.5px 1.5px #26a69a;
-}
 #project-container, #about-me-container {
-	margin-top:34rem;
 	text-align: center;
 }
 .main-words {
@@ -74,36 +70,39 @@
 	color:#00b8d4;
 	opacity: 0;
 }
-#about-me-container {
+#about-me-container, #card-container {
 	display:flex;
 	align-items: center;
 	justify-content: center;
 	flex-flow: column;
-	margin-top:50rem;
 	z-index:20;
+}
+#project-container {
+	margin-top:20rem;
+}
+#about-me-container {
+	margin-top:30rem;
 }
 #about-me-header, #project-head, #contact-header{
 	font-size: 5rem;
 	text-shadow: 2px 2px 5px #00b8d4;
 	font-family: 'Lobster', cursive;
 }
-#card-container {
-	display:flex;
-	flex-wrap:wrap;
-	justify-content: space-around;
-	align-items: center;
-	margin:5rem;
-}
 
 #contact-container {
 	text-align: center;
-	margin-top:19rem;
+	margin-top:8rem;
 }
 #contact-form {
 	width:50vw;
 }
 .dropdown-content {
 	color:#00b8d4;
+}
+#paper-plane {
+	max-width:4rem;
+	height:auto;
+	
 }
 
 @media only screen and (max-device-width : 768px) {
@@ -115,10 +114,6 @@
 	}
 	.card {
 		margin-top:5rem;
-	}
-	#text-bug, #recipe-calc, #news-ping, #asteroids {
-	height:auto;
-	width:auto;
 	}
 	#node {
 		margin-left:-6rem;
