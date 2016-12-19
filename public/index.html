@@ -9,8 +9,6 @@
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     </head>
 
@@ -27,6 +25,12 @@
                 <ul class = "left hide-on-med-and-up">
                     <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">toc</i></a></li>
                 </ul>
+                <ul class = "left hide-on-med-and-down">
+                    <li class = "my-name">Cody Berlin</li>
+                </ul>
+                <ul  class = "right hide-on-med-and-up">
+                    <li class = "my-name">Cody Berlin</li>
+                </ul>
               </div>
             </nav>
             <ul id="dropdown1" class="dropdown-content">
@@ -35,10 +39,24 @@
               <li class = "contact-me-button"><a href="#">Contact</a></li>
             </ul>
         </div>
+        <div id = "about-me-container">
+            <div id = "about-me-card" class="card horizontal">
+              <div class="card-image">
+                <img src="images/myhead.png">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <h3 class="header" id = "about-me-header">About Me</h2>
+                  <h5>Hi! My name is Cody Berlin. I am a full-stack developer who loves working on interesting projects using various technologies. You can contact me through either the Linkedin link below or the form at the bottom which goes direct to my email.</h5>
+                </div>
+                <div class="card-action">
+                  <a href="https://www.linkedin.com/in/cgberlin" target="_blank">LinkedIn</a>
+                  <a href="https://github.com/cgberlin" target="_blank">Github</a>
+                </div>
+              </div>
+            </div>
+        </div>
         <div id = "phaser">
-          <div id = "pin-my-name">
-            <h1 id = "my-name">Cody Berlin</h1>
-          </div>
           <div id = "play-stagger-words">
             <div id = "node" class = "main-words">
               <p>NodeJS</p>
@@ -70,23 +88,7 @@
       </header>
 
       <main>
-        <div id = "about-me-container">
-            <div id = "about-me-card" class="card horizontal">
-              <div class="card-image">
-                <img src="images/myhead.png">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h3 class="header" id = "about-me-header">About Me</h2>
-                  <h5>Hi! My name is Cody Berlin. I am a full-stack developer who loves working on interesting projects using various technologies. You can contact me through either the Linkedin link below or the form at the bottom which goes direct to my email.</h5>
-                </div>
-                <div class="card-action">
-                  <a href="https://www.linkedin.com/in/cgberlin" target="_blank">LinkedIn</a>
-                  <a href="https://github.com/cgberlin" target="_blank">Github</a>
-                </div>
-              </div>
-            </div>
-        </div>
+
         <div id = "trigger-projects"></div>
         <div id = "project-container">
             <h2 id = "project-head">Projects</h2>
@@ -98,8 +100,8 @@
                   <div class = "card-stacked">
                     <div class="card-content">
                       <h4>Text Bug</h4>
-                      <p>A web app to help create auto-sending, scheduled text messages or reminders.</p>
-                      <p>Built using HTML5, CSS, MongoDB, Bootstrap, NodeJS, Express, Passport, Cronjob, and the Sinch API for sending the text messages.</p>
+                      <p class = "project-description">A web app to help create auto-sending, scheduled text messages or reminders.</p>
+                      <p class = "project-description">Built using HTML5, CSS, MongoDB, Bootstrap, NodeJS, Express, Passport, Cronjob, and the Sinch API for sending the text messages.</p>
                     </div>
                     <div class = "card-action">
                       <a href="https://text-bug.herokuapp.com/" target="_blank">Demo</a>
@@ -115,8 +117,8 @@
                   <div class = "card-stacked">
                     <div class="card-content">
                       <h4>Recipe Calc</h4>
-                      <p>A web app to help find recipes either randomly or using ingredients supplied by the user.</p>
-                      <p>Built using React, Redux, HTML5, CSS, NodeJS, Express, and MaterialUI.</p>
+                      <p class = "project-description">A web app to help find recipes either randomly or using ingredients supplied by the user.</p>
+                      <p class = "project-description">Built using React, Redux, HTML5, CSS, NodeJS, Express, and MaterialUI.</p>
                     </div>
                     <div class="card-action">
                       <a href="https://cgberlin-recipe.herokuapp.com/" target="_blank">Demo</a>
@@ -132,8 +134,8 @@
                   <div class = "card-stacked">
                     <div class="card-content">
                       <h4>2 Player Asteroids</h4>
-                      <p>A two player game built entirely using phaserJS, socket.io, and express to expose the application.</p>
-                      <p>Built using PhaserJS, Socket.io, NodeJS, HTML5, MongoDB, and CSS.</p>
+                      <p class = "project-description">A two player game built entirely using phaserJS, socket.io, and express to expose the application.</p>
+                      <p class = "project-description">Built using PhaserJS, Socket.io, NodeJS, HTML5, MongoDB, and CSS.</p>
                     </div>
                     <div class="card-action">
                       <a href="http://shelbysedger.com" target="_blank">Demo</a>
@@ -149,8 +151,8 @@
                   <div class = "card-stacked">
                     <div class="card-content">
                       <h4>News Ping</h4>
-                      <p>A small web app that uses an external API and the google maps API to log news stories based on a searched location.</p>
-                      <p>Built using HTML5, CSS, the google maps API, and the webhose news API.</p>
+                      <p class = "project-description">A small web app that uses an external API and the google maps API to log news stories based on a searched location.</p>
+                      <p class = "project-description">Built using HTML5, CSS, the google maps API, and the webhose news API.</p>
                     </div>
                     <div class="card-action">
                       <a href="https://cgberlin.github.io/news-ping-current" target="_blank">Demo</a>
@@ -205,7 +207,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script src="https://code.jquery.com/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
       <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script> 
       <script src ="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/ScrollToPlugin.min.js"></script>
