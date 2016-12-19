@@ -39,13 +39,31 @@ var scene = new ScrollMagic.Scene({
   .setTween(moveWords)
   .addTo(controller);
 
+$('#submit-button').on('click', function(e) {
+  if ($('#first_name').val() == '') {
+    alert('Please enter a first name');
+    e.preventDefault();
+  }
+  else if ($('#email').val() == '') {
+    alert('Please enter a email address');
+    e.preventDefault();
+  }
+  else if ($('#textarea1').val() == '') {
+    alert('Please enter a message to send me');
+    e.preventDefault();
+  }
+  else {
+    e.submit();
+  }
+});
+
 
 
 function scroller(event){
   var scrollYPos = $(event.data.id).offset().top;
   event.preventDefault();
   TweenMax.to(window, 2, {scrollTo:{y:scrollYPos, x:0}, ease:Power4.easeOut})
-  }
+}
 
 
 

@@ -98,7 +98,7 @@
 	margin-top:5rem;
 }
 #about-me-header, #project-head, #contact-header{
-	font-size: 5rem;
+	font-size: 4rem;
 	text-shadow: 2px 2px 5px #00b8d4;
 	font-family: 'Lobster', cursive;
 }
@@ -154,5 +154,8 @@
 	}
 	h5 {
 		font-size:1rem;
+	}
+	.my-name {
+		font-size:2rem;
 	}
 }
